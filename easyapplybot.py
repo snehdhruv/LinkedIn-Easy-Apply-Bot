@@ -43,7 +43,7 @@ def setupLogger() -> None:
 class EasyApplyBot:
     setupLogger()
     # MAX_SEARCH_TIME is 10 hours by default, feel free to modify it
-    MAX_SEARCH_TIME = 10 * 60 * 60
+    MAX_SEARCH_TIME = 20 * 60 * 60
 
     def __init__(self,
                  username,
@@ -51,7 +51,7 @@ class EasyApplyBot:
                  phone_number,
                  uploads={},
                  filename='output.csv',
-                 blacklist=[],
+                 blacklist=['Jobot','Canoo','Cybercoders'],
                  blackListTitles=[]) -> None:
 
         log.info("Welcome to Easy Apply Bot")
@@ -369,8 +369,7 @@ class EasyApplyBot:
                               "button[aria-label='Submit application']")
             submit_application_locator = (By.CSS_SELECTOR,
                                           "button[aria-label='Submit application']")
-            error_locator = (By.CSS_SELECTOR,
-                             "p[data-test-form-element-error-message='true']")
+            error_locator = (By.CLASS_NAME, "artdeco-inline-feedback__message")
             upload_locator = upload_locator = (By.CSS_SELECTOR, "button[aria-label='DOC, DOCX, PDF formats only (5 MB).']")
             follow_locator = (By.CSS_SELECTOR, "label[for='follow-company-checkbox']")
 
@@ -407,7 +406,7 @@ class EasyApplyBot:
                         for element in self.browser.find_elements(error_locator[0],
                                                                   error_locator[1]):
                             text = element.text
-                            if "Please enter a valid answer" in text:
+                            if "Please enter a valid answer" or "Please make a selection" in text:
                                 button = None
                                 break
                     if button:

@@ -1,15 +1,32 @@
-username: 
-password: 
-phone_number:
+username: sdhruv@ucsd.edu
+password: random902
+phone_number: 8018150123
 
 positions:
-- Data Scientist
-- # Another position you want to search for
-- # A third position you want to search for
+- Software Engineer
+- Molding Engineer
+- DevOps Engineer
+- Software Development Engineer
+- Backend Software Engineer
+- Full Stack Software Engineer
+- Frontend Software Engineer
+- Embedded Software Engineer
+- Machine Learning Engineer
+- Process Engineer
+- Manufacturing Engineer
+- Injection Engineer
+- Tooling Engineer
+- Plastics Engineer
+- Production Engineer
+- Senior Engineer
+- Design Engineer
+- Automation Engineer
+- Project Engineer
+
 
 locations:
 - Remote
-- # A second location you want to search in 
+- Los Angeles 
 
 # --------- Optional Parameters -------
 # uploads:
@@ -22,7 +39,8 @@ locations:
 # - # PATH TO OUTPUT FILE (default output.csv)
 
 # blacklist:
-# - # Company names you want to ignore
+# - # Jobot
+# - # CyberCoders
 
 #blackListTitles:
 #- # Add job titles you want to ignore
